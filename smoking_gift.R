@@ -12,3 +12,4 @@ survey_smoking_ID <- survey_smoking_ID[-c(1:2),]
 survey_smoking_com <- survey_smoking_ID %>% group_by(SubjID) %>% summarise(sum_session=n_distinct(Session))
 survey_smoking_com$complete <- ifelse(survey_smoking_com$sum_session >= 3, 1, 0)
 
+write.csv(survey_smoking_com, file = 'survey_smoking_com.csv', row.names = TRUE)
