@@ -23,9 +23,6 @@ survey_com <- survey_smoking %>%
   mutate(Complete = ifelse(Sum_session == TOTAL_SESSION, 1, 0)) %>%
   view()
 
-
-
-
 ### ignore
 # # SubjID, Session extract
 # survey_smoking_ID <- 
