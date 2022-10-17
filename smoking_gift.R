@@ -4,7 +4,7 @@ library(tidyverse)
 
 # read data
 # Global variable
-FILE_NAME = 'stress_fMRI_smoking_221014.csv'
+FILE_NAME = 'stress_fMRI_smoking_221017.csv'
 # paste0(), strc 
 survey_smoking <- read.csv(FILE_NAME)
 
@@ -38,8 +38,6 @@ survey_smoking <- read.csv(FILE_NAME)
 
 
 
-###
-# Check with columns of interest
 
 # change order of columns
 survey_smoking %>% 
@@ -53,6 +51,6 @@ survey_smoking %>%
   slice(n():3) %>% 
   as_tibble() %>% 
   group_by(SubjID, Session) %>% 
-  tally()
+  tally() %>% view()
 
 # survey_smoking %>% select(Finished)
